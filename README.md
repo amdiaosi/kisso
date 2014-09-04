@@ -13,7 +13,22 @@ Usage
 
 [kisso-test-sso](https://github.com/leqwang/kisso/tree/master/kisso/test-sso)
 
-![GitHub](https://raw.githubusercontent.com/tuzip/kisso-test-sparkjava/master/login.jpg "Kisso,login cookie")
+（1）sso 登录状态
+![GitHub](https://raw.githubusercontent.com/leqwang/kisso/master/kisso/images/sso.jpg "Kisso,login cookie")
+
+（2）跨域登录
+
+hosts:
+--------------------------------------------
+127.0.0.1 sso.test.com
+127.0.0.1 my.web.com
+--------------------------------------------
+
+访问 my.web.com:8090/index.html  如果未登录会重定向至sso域登录页面
+![GitHub](https://raw.githubusercontent.com/leqwang/kisso/master/kisso/images/nologin.jpg "Kisso,crossdomain login")
+
+登录成功 my.web.com 如图
+![GitHub](https://raw.githubusercontent.com/leqwang/kisso/master/kisso/images/login.jpg "Kisso,crossdomain login")
 
 
 Supports
