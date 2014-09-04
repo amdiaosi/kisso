@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<meta name="robots" content="none">
+<script type="text/javascript" src="//cdnjscn.b0.upaiyun.com/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+<body>
+	<script type="text/javascript">
+		function proxyLogin(askurl, okurl) {
+		    var killAjax = true;
+	    
+		    setTimeout(function() {
+		        checkajaxkill();
+		    }, 30000);
+		    
+		    var ajaxCall = jQuery.getJSON(askurl + "&callback=?", function(d){
+		    	killAjax = false;
+		    	if(d.msg == "-1"){//-1、未登录
+			    	window.location.href = "http://sso.test.com:8080/login.html?ReturnUrl=http%3A%2F%2Fmy.web.com%3A8090%2Fproxylogin.html";
+		    	}else{//已登录
+			    	$.post(okurl, {replyTxt:d.msg} , function(e) {
+			    		window.location.href = e.returl;
+				    }, "json");
+		    	}
+		    });
+		    
+		    function checkajaxkill(){
+		        if(killAjax){
+		        	ajaxCall.abort();
+		        	window.location.href = "http://my.web.com:8090/timeout.html";
+		        }
+		    }
+		}
+		
+		//代理登录
+		proxyLogin("$!{askurl}", "$!{okurl}");
+	</script>
+	<div align="center" style="margin-top: 180px;">
+		Loading ...
+	</div>
+</body>
+</html>
