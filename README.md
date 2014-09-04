@@ -1,4 +1,4 @@
-sso
+﻿sso
 ===
 
 kisso cookie sso framework
@@ -51,7 +51,10 @@ Futures
 ====================
 1、实现完整 sso 工程实例
 
-开源赞助我(支付宝): hubinmdj@163.com
+
+开源赞助我(支付宝): 
+====================
+![GitHub](https://raw.githubusercontent.com/leqwang/kisso/master/kisso/images/donate.png "开源赞助我(支付宝)")
 
 copyright
 ====================
