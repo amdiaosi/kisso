@@ -9,9 +9,9 @@ Usage
 
 [kisso dependent libs](https://github.com/tuzip/kisso-libs)
 
-[kisso-test-my](https://github.com/leqwang/kisso/tree/master/test-my)
+[kisso-test-my](https://github.com/leqwang/kisso/tree/master/kisso/test-my)
 
-[kisso-test-sso](https://github.com/leqwang/kisso/tree/master/test-sso)
+[kisso-test-sso](https://github.com/leqwang/kisso/tree/master/kisso/test-sso)
 
 ![GitHub](https://raw.githubusercontent.com/tuzip/kisso-test-sparkjava/master/login.jpg "Kisso,login cookie")
 
