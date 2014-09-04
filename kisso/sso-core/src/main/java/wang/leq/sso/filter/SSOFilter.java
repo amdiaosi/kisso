@@ -48,7 +48,7 @@ public class SSOFilter implements Filter {
 		 * 从应用 web.xml 配置参数中
 		 * 获取不需要拦截URL
 		 */
-		OVERURL = config.getInitParameter("OVER.URL");
+		OVERURL = config.getInitParameter("over.url");
 	}
 
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException,
