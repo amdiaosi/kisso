@@ -1,9 +1,3 @@
-/**
- * VelocityRoute.java
- * spark.template.velocity
- * Copyright (c) 2014, 北京微课创景教育科技有限公司版权所有.
-*/
-
 package spark.template.velocity;
 
 import java.io.StringWriter;
